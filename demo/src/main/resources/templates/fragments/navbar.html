@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div th:fragment="navbar">
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">
+                SGF - Sistema de Gerenciamento de Faltas
+            </span>
+
+            <a class="btn btn-danger"
+               th:href="@{/logout}">Sair</a>
+        </div>
+    </nav>
+</div>
+
+</body>
+</html>

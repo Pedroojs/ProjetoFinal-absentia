@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div th:fragment="sidebar">
+    <ul class="nav flex-column mt-4">
+        <li class="nav-item">
+            <a class="nav-link" th:href="@{/dashboard}">
+                Dashboard
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" th:href="@{/courses}">
+                Cursos
+            </a>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="layout :: layout(~{::section})">
+
+<section>
+
+    <h2>My Courses</h2>
+
+    <form th:action="@{/courses}" method="post" class="mb-4">
+
+        <input type="text" name="name" placeholder="Course name"
+               class="form-control mb-2" required>
+
+        <input type="number" name="allowedAbsences"
+               placeholder="Allowed Absences"
+               class="form-control mb-2" required>
+
+        <button class="btn btn-primary">Add Course</button>
+    </form>
+
+    <div class="card p-3" th:each="course : ${courses}">
+        <h5 th:text="${course.name}"></h5>
+        <p>
+            Absences:
+            <span th:text="${course.absences}"></span> /
+            <span th:text="${course.allowedAbsences}"></span>
+        </p>
+    </div>
+
+</section>
+
+</html>
